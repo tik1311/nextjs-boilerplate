@@ -1,5 +1,6 @@
 import Image from "next/image";
 import { FaGithub, FaLinkedin, FaTwitter } from 'react-icons/fa';
+import { RiAliensLine } from "react-icons/ri";
 
 export default function Home() {
   return (
@@ -8,7 +9,7 @@ export default function Home() {
       <header className="w-full py-6 px-8">
         <nav className="flex justify-between items-center">
           <div className="logo">
-            <h1 className="text-2xl font-bold">Luke<span className="text-neon">.</span></h1>
+            {/* <h1 className="text-2xl font-bold">Luke<span className="text-neon">.</span></h1> */}
           </div>
           <div className="nav-links hidden md:flex space-x-8">
             <a href="#" className="text-neon">Home</a>
@@ -23,13 +24,29 @@ export default function Home() {
 
       {/* Main Content */}
       <main className="flex-1 px-8 py-12 md:py-16 grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
-        {/* Left Content */}
+        {/* Right Content - Profile Image (moved to left) */}
+        <div className="flex justify-center items-center order-first md:order-none">
+          <div className="relative w-64 h-64 md:w-80 md:h-80">
+            <div className="absolute inset-0 rounded-full border-2 border-neon animate-pulse"></div>
+            <div className="absolute inset-0 rounded-full border-dashed border-2 border-neon animate-spin-slow"></div>
+            <Image
+              src="/profile.jpg"
+              alt="Luke Coleman"
+              width={320}
+              height={320}
+              className="rounded-full"
+              priority
+            />
+          </div>
+        </div>
+
+        {/* Left Content (text) - now on the right */}
         <div className="space-y-6">
           <p className="text-gray-300">Software Developer</p>
           <h2 className="text-5xl md:text-6xl font-mono leading-tight">
-            Hello 
+            I'm 
             <br />
-            <span className="text-neon">Luke Coleman</span>
+            <span className="text-neon">Thitima Khamgong</span>
           </h2>
 
           <p className="text-gray-300 max-w-md text-sm">
@@ -53,36 +70,45 @@ export default function Home() {
               <a href="#" className="w-8 h-8 rounded-full border border-gray-600 flex items-center justify-center hover:border-neon hover:text-neon">
                 <FaLinkedin />
               </a>
-              <a href="#" className="w-8 h-8 rounded-full border border-gray-600 flex items-center justify-center hover:border-neon hover:text-neon">
-                <FaTwitter />
+               <a href="#" className="w-8 h-8 rounded-full border border-gray-600 flex items-center justify-center hover:border-neon hover:text-neon">
+                <RiAliensLine />
               </a>
             </div>
-          </div>
-        </div>
-
-        {/* Right Content - Profile Image */}
-        <div className="flex justify-center items-center">
-          <div className="relative w-64 h-64 md:w-80 md:h-80">
-            <div className="absolute inset-0 rounded-full border-2 border-neon animate-pulse"></div>
-            <div className="absolute inset-0 rounded-full border-dashed border-2 border-neon animate-spin-slow"></div>
-            <Image
-              src="/profile.jpg"
-              alt="Luke Coleman"
-              width={320}
-              height={320}
-              className="rounded-full"
-              priority
-            />
           </div>
         </div>
       </main>
 
       {/* Stats Section */}
-      <section className="px-8 py-12 grid grid-cols-2 md:grid-cols-4 gap-4 text-center">
-        <div className="stat-item">
-          <h3 className="text-4xl font-bold text-white">12</h3>
-          <p className="text-sm text-gray-400">Years of<br />experience</p>
+      <section className="px-8 py-12 flex flex-col items-center text-center">
+  <div className="mb-12">
+    <h3 className="text-5xl font-bold text-white">3</h3>
+    <p className="text-gray-400 mt-1">Years of<br />experience</p>
+  </div>
+
+  {/* Timeline */}
+  <div className="relative w-full max-w-3xl">
+    {/* Timeline line */}
+    <div className="absolute top-4 left-0 right-0 h-0.5 bg-white"></div>
+
+    <div className="flex justify-between items-start relative z-1">
+      {[1, 2, 3].map((_, i) => (
+        <div key={i} className="flex flex-col items-center w-1/1">
+          {/* Circle */}
+          <div className="w-8 h-8 bg-white rounded-full mb-2"></div>
+          {/* Label */}
+          <p className="text-sm text-white leading-tight">4 month<br />programmer</p>
         </div>
+      ))}
+    </div>
+  </div>
+</section>
+
+
+      {/* <section className="px-8 py-12 grid grid-cols-2 md:grid-cols-4 gap-4 text-center">
+        <div className="stat-item">
+          <h3 className="text-4xl font-bold text-white">3</h3>
+          <p className="text-sm text-gray-400">Years of<br />experience</p>
+        </div>    
         <div className="stat-item">
           <h3 className="text-4xl font-bold text-white">26</h3>
           <p className="text-sm text-gray-400">Projects<br />completed</p>
@@ -95,7 +121,7 @@ export default function Home() {
           <h3 className="text-4xl font-bold text-white">500</h3>
           <p className="text-sm text-gray-400">Code<br />commits</p>
         </div>
-      </section>
+      </section> */}
     </div>
   );
 }
