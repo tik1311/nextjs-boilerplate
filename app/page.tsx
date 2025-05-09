@@ -27,7 +27,7 @@ export default function Home() {
         <div className="space-y-6">
           <p className="text-gray-300">Software Developer</p>
           <h2 className="text-5xl md:text-6xl font-mono leading-tight">
-            Hello I'm
+            Hello 
             <br />
             <span className="text-neon">Luke Coleman</span>
           </h2>
