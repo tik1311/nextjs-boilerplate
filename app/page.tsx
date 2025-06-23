@@ -3,6 +3,20 @@ import Link from "next/link";
 import { FaGithub, FaLinkedin } from 'react-icons/fa';
 import { RiAliensLine } from "react-icons/ri";
 
+
+
+// กำหนดข้อมูลประสบการณ์ก่อนใช้งาน
+const experiences = [
+  { duration: "4 month", role: "programmer" },
+  { duration: "5 month", role: "programmer" },
+  { duration: "7 month", role: "programmer" },
+  { duration: "1 month", role: "programmer" },
+  
+  // เพิ่มข้อมูลตามจำนวนที่ต้องการ
+];
+
+
+
 export default function Home() {
   return (
 
@@ -97,18 +111,26 @@ export default function Home() {
 
 
   {/* Experience */}
-    <div className="flex justify-between items-start relative z-1">
-      {[1, 2, 3].map((_, i) => (
-        <div key={i} className="flex flex-col items-center w-1/1">
-          {/* Circle */}
-          <div className="w-8 h-8 rounded-full mb-2 circle-color"></div>
-          {/* Label */}
-          <p className="text-sm text-white leading-tight">4 month<br />programmer</p>
-        </div>
-      ))}
+  <div className="flex justify-between items-start relative z-1">
+  {/* ตัวอย่างการใช้ข้อมูลจริง */}
+  {experiences.map((experience, i) => (
+    <div key={i} className="flex flex-col items-center w-1/3">
+      {/* Circle */}
+      <div className="w-8 h-8 rounded-full mb-2 circle-color"></div>
+      {/* Label - แสดงข้อมูลเฉพาะของแต่ละประสบการณ์ */}
+      <p className="text-sm text-white leading-tight text-center">
+        {experience.duration}<br />{experience.role}
+      </p>
     </div>
+  ))}
+</div>
+
+
+
+
   </div>
   </section>
     </div>
+
   );
 }
