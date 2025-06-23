@@ -44,7 +44,14 @@ export default function WorkPage() {
         <Link href="/work" className="text-neon">Work</Link>
         <Link href="/work/contactpage" className="hover:text-neon">Contact</Link>
       </div>
-      <button className="bg-neon text-dark px-4 py-2 rounded-full font-medium">Let's Talk</button>
+     <a
+        href="https://www.youtube.com/"
+        target="_blank"
+        rel="noopener noreferrer"
+        className="bg-neon text-dark px-4 py-2 rounded-full font-medium inline-block"
+        >
+        Let's Talk
+      </a>
     </nav>
     </header>
 

@@ -15,7 +15,16 @@ export default function Home() {
         <Link href="/work" className="hover:text-neon">Work</Link>
         <Link href="/work/contactpage" className="hover:text-neon">Contact</Link>
       </div>
-      <button className="bg-neon text-dark px-4 py-2 rounded-full font-medium">Let's Talk</button>
+      
+      <a
+        href="https://www.youtube.com/"
+        target="_blank"
+        rel="noopener noreferrer"
+        className="bg-neon text-dark px-4 py-2 rounded-full font-medium inline-block"
+        >
+        Let's Talk
+      </a>
+
     </nav>
     </header>
 
@@ -27,11 +36,11 @@ export default function Home() {
             <div className="absolute inset-0 rounded-full border-2 border-neon animate-pulse"></div>
             <div className="absolute inset-0 rounded-full border-dashed border-2 border-neon animate-spin-slow"></div>
             <Image
-              src="/profile.jpg"
-              alt="Luke Coleman"
-              width={320}
-              height={320}
-              className="rounded-full"
+              src="/zoey1.jpg"
+              alt="Thitima Khamgong"
+              width={256}
+              height={256}
+              className="absolute inset-0 w-full h-full rounded-full object-cover"
               priority
             />
           </div>
@@ -43,7 +52,7 @@ export default function Home() {
           <h2 className="text-5xl md:text-6xl font-mono leading-tight">
             I'm 
             <br />
-            <span className="text-neon">Thitima Khamgong</span>
+            <span className="text-neon">Zoey</span>
           </h2>
 
           <p className="text-gray-300 max-w-md text-sm">
@@ -93,7 +102,7 @@ export default function Home() {
       {[1, 2, 3].map((_, i) => (
         <div key={i} className="flex flex-col items-center w-1/1">
           {/* Circle */}
-          <div className="w-8 h-8 bg-white rounded-full mb-2"></div>
+          <div className="w-8 h-8 rounded-full mb-2 circle-color"></div>
           {/* Label */}
           <p className="text-sm text-white leading-tight">4 month<br />programmer</p>
         </div>
@@ -101,26 +110,6 @@ export default function Home() {
     </div>
   </div>
 </section>
-
-
-      {/* <section className="px-8 py-12 grid grid-cols-2 md:grid-cols-4 gap-4 text-center">
-        <div className="stat-item">
-          <h3 className="text-4xl font-bold text-white">3</h3>
-          <p className="text-sm text-gray-400">Years of<br />experience</p>
-        </div>    
-        <div className="stat-item">
-          <h3 className="text-4xl font-bold text-white">26</h3>
-          <p className="text-sm text-gray-400">Projects<br />completed</p>
-        </div>
-        <div className="stat-item">
-          <h3 className="text-4xl font-bold text-white">8</h3>
-          <p className="text-sm text-gray-400">Technologies<br />mastered</p>
-        </div>
-        <div className="stat-item">
-          <h3 className="text-4xl font-bold text-white">500</h3>
-          <p className="text-sm text-gray-400">Code<br />commits</p>
-        </div>
-      </section> */}
     </div>
   );
 }
