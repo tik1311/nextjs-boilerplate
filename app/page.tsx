@@ -1,26 +1,23 @@
 import Image from "next/image";
-import { FaGithub, FaLinkedin, FaTwitter } from 'react-icons/fa';
+import Link from "next/link";
+import { FaGithub, FaLinkedin } from 'react-icons/fa';
 import { RiAliensLine } from "react-icons/ri";
 
 export default function Home() {
   return (
-    <div className="min-h-screen bg-dark text-white flex flex-col">
+
+  <div className="min-h-screen bg-dark text-white flex flex-col">
       {/* Navigation */}
-      <header className="w-full py-6 px-8">
-        <nav className="flex justify-between items-center">
-          <div className="logo">
-            {/* <h1 className="text-2xl font-bold">Luke<span className="text-neon">.</span></h1> */}
-          </div>
-          <div className="nav-links hidden md:flex space-x-8">
-            <a href="#" className="text-neon">Home</a>
-            <a href="#" className="hover:text-neon">Services</a>
-            <a href="#" className="hover:text-neon">Resume</a>
-            <a href="#" className="hover:text-neon">Work</a>
-            <a href="#" className="hover:text-neon">Contact</a>
-          </div>
-          <button className="bg-neon text-dark px-4 py-2 rounded-full font-medium">Let's Talk</button>
-        </nav>
-      </header>
+    <header className="w-full py-6 px-8">
+    <nav className="flex justify-end items-center space-x-8">
+      <div className="nav-links hidden md:flex space-x-8">
+        <Link href="/" className="text-neon">Home</Link>
+        <Link href="/work" className="hover:text-neon">Work</Link>
+        <Link href="/work/contactpage" className="hover:text-neon">Contact</Link>
+      </div>
+      <button className="bg-neon text-dark px-4 py-2 rounded-full font-medium">Let's Talk</button>
+    </nav>
+    </header>
 
       {/* Main Content */}
       <main className="flex-1 px-8 py-12 md:py-16 grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
@@ -87,9 +84,11 @@ export default function Home() {
 
   {/* Timeline */}
   <div className="relative w-full max-w-3xl">
-    {/* Timeline line */}
-    <div className="absolute top-4 left-0 right-0 h-0.5 bg-white"></div>
+    {/* <div className="absolute top-4 left-0 right-0 h-0.5 bg-white"></div> */}
 
+
+
+  {/* Experience */}
     <div className="flex justify-between items-start relative z-1">
       {[1, 2, 3].map((_, i) => (
         <div key={i} className="flex flex-col items-center w-1/1">
