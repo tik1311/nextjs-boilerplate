@@ -15,7 +15,6 @@ export default function Home() {
         <Link href="/work" className="hover:text-neon">Work</Link>
         <Link href="/work/contactpage" className="hover:text-neon">Contact</Link>
       </div>
-      
       <a
         href="https://www.youtube.com/"
         target="_blank"
@@ -109,7 +108,7 @@ export default function Home() {
       ))}
     </div>
   </div>
-</section>
+  </section>
     </div>
   );
 }

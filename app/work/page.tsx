@@ -15,8 +15,7 @@ export default function WorkPage() {
     { icon: <FaJs className="text-4xl" />, name: "JavaScript" },
     { icon: <SiMongodb className="text-4xl" />, name: "MongoDB" },
     { icon: <FaHtml5 className="text-4xl" />, name: "HTML5" },
-    { icon: <FaCss3Alt className="text-4xl" />, name: "CSS3" },
-    { icon: <SiExpress className="text-4xl" />, name: "Express" }
+    { icon: <FaCss3Alt className="text-4xl" />, name: "CSS3" }
   ]
 
   const projects = [ 
@@ -58,7 +57,7 @@ export default function WorkPage() {
     <main className="flex-1 px-8 py-12 md:py-16 pb-20 md:pb-12">
       <div className="max-w-6xl mx-auto">
         <div className="text-center mb-16">
-          <h2 className="text-5xl md:text-6xl font-mono text-neon mb-4">My Work</h2>
+          <h2 className="text-5xl md:text-6xl font-mono text-neon mb-4">Projec</h2>
           <p className="text-gray-300 text-lg">Here are some of my recent projects</p>
         </div>
 
