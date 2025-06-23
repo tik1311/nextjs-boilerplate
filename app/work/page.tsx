@@ -19,39 +19,15 @@ export default function WorkPage() {
     { icon: <SiExpress className="text-4xl" />, name: "Express" }
   ]
 
-  const projects = [
-    {
-      title: "E-Commerce Platform",
-      description: "Full-stack e-commerce solution with React, Node.js, and MongoDB",
-      tech: ["React", "Node.js", "MongoDB", "Stripe"],
-      image: "/project1.jpg"
-    },
-    {
-      title: "Task Management App",
-      description: "Modern task management application with real-time updates",
-      tech: ["Next.js", "Firebase", "Tailwind CSS"],
-      image: "/project2.jpg"
-    },
-    {
-      title: "Weather Dashboard",
-      description: "Real-time weather data visualization with interactive charts",
-      tech: ["React", "D3.js", "Weather API"],
-      image: "/project3.jpg"
-    },
-    {
-      title: "Social Media Dashboard",
-      description: "Analytics dashboard for social media management",
-      tech: ["Vue.js", "Express", "PostgreSQL"],
-      image: "/project4.jpg"
-    },
+  const projects = [ 
     {
       title: "Portfolio Website",
-      description: "Responsive portfolio website with modern design",
-      tech: ["Next.js", "Tailwind CSS", "Framer Motion"],
+      description: "portfolio website with modern design",
+      tech: ["Next.js"],
       image: "/project5.jpg"
     },
     {
-      title: "Chat Application",
+      title: "Application",
       description: "Real-time chat application with Socket.io",
       tech: ["React", "Socket.io", "Node.js"],
       image: "/project6.jpg"
