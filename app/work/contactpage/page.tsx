@@ -1,6 +1,9 @@
 "use client";
+import { addDoc, collection, doc, getDoc } from "firebase/firestore";
 import Link from "next/link";
+import { db } from "../contactpage/firebase";
 import { useState } from "react";
+
 
 export default function ContactPage() {
   const [formData, setFormData] = useState({
@@ -18,11 +21,27 @@ export default function ContactPage() {
     }));
   };
 
-  const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault();
+  const handleSubmit = async (e: React.FormEvent) => {
+  e.preventDefault();
+
+  try {
+    await addDoc(collection(db, "contact"), formData); // 👈 เพิ่มไปยัง collection 'contact'
     console.log("Form Data Submitted:", formData);
     alert("ขอบคุณที่ติดต่อเรา!");
-  };
+
+    // รีเซ็ตฟอร์ม
+    setFormData({
+      firstName: "",
+      lastName: "",
+      email: "",
+      textt: "",
+    });
+  } catch (error) {
+    console.error("Error adding document: ", error);
+    alert("มีข้อผิดพลาดในการส่งข้อมูล");
+  }
+};
+
 
   return (
 
@@ -42,7 +61,7 @@ export default function ContactPage() {
             </Link>
           </div>
          <a
-        href="https://www.youtube.com/"
+        href="https://discord.gg/BqErnCDk"
         target="_blank"
         rel="noopener noreferrer"
         className="bg-neon text-dark px-4 py-2 rounded-full font-medium inline-block"
@@ -51,8 +70,6 @@ export default function ContactPage() {
       </a>
         </nav>
       </header>
-
-
 
       {/* Contact Form */}
       <main className="flex-1 flex flex-col items-center justify-center px-4">

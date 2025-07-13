@@ -7,11 +7,8 @@ import { RiAliensLine } from "react-icons/ri";
 
 // กำหนดข้อมูลประสบการณ์ก่อนใช้งาน
 const experiences = [
-  { duration: "4 month", role: "programmer" },
-  { duration: "5 month", role: "programmer" },
-  { duration: "7 month", role: "programmer" },
-  { duration: "1 month", role: "programmer" },
-  
+  { duration: "4 Month", role: "Software Developer [Full Stack Developer]" },
+  { duration: "2 Year", role: "IT and Application" },
   // เพิ่มข้อมูลตามจำนวนที่ต้องการ
 ];
 
@@ -30,7 +27,7 @@ export default function Home() {
         <Link href="/work/contactpage" className="hover:text-neon">Contact</Link>
       </div>
       <a
-        href="https://www.youtube.com/"
+        href="https://discord.gg/BqErnCDk"
         target="_blank"
         rel="noopener noreferrer"
         className="bg-neon text-dark px-4 py-2 rounded-full font-medium inline-block"
@@ -48,13 +45,10 @@ export default function Home() {
           <div className="relative w-64 h-64 md:w-80 md:h-80">
             <div className="absolute inset-0 rounded-full border-2 border-neon animate-pulse"></div>
             <div className="absolute inset-0 rounded-full border-dashed border-2 border-neon animate-spin-slow"></div>
-            <Image
-              src="/zoey1.jpg"
-              alt="Thitima Khamgong"
-              width={256}
-              height={256}
-              className="absolute inset-0 w-full h-full rounded-full object-cover"
-              priority
+            <img
+            src="/zoey1.jpg"
+            alt="Thitima Khamgong"
+            className="absolute inset-0 w-full h-full rounded-full object-cover"
             />
           </div>
         </div>
@@ -65,33 +59,50 @@ export default function Home() {
           <h2 className="text-5xl md:text-6xl font-mono leading-tight">
             I'm 
             <br />
-            <span className="text-neon">Zoey</span>
+            <span className="text-neon">Thitima Khamgong</span>
           </h2>
 
           <p className="text-gray-300 max-w-md text-sm">
-            I excel at crafting elegant digital experiences and
-            I am proficient in various programming languages and
-            technologies.
+            Able to design UX/UI for applications and web pages Capable of collaborating effectively with team members and communicating efficiently
+            Experienced in programming, website development, application creation, and automation platforms
+            Studied and gained knowledge in deep learning and natural language processing
+            Continuously learning to leverage AI and emerging technologies
           </p>
 
           <div className="flex space-x-4 mt-8">
-            <button className="border border-neon text-neon px-4 py-2 rounded-full font-medium flex items-center">
+            <a
+             href="/CV/Thitima_Khamgong_CV.pdf"
+            download="Thitima_Khamgong_CV.pdf"
+            className="border border-neon text-neon px-4 py-2 rounded-full font-medium flex items-center"
+            >
+            DOWNLOAD CV
+            <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4 ml-2" viewBox="0 0 20 20" fill="currentColor">
+            <path fillRule="evenodd" d="M3 17a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zm3.293-7.707a1 1 0 011.414 0L9 10.586V3a1 1 0 112 0v7.586l1.293-1.293a1 1 0 111.414 1.414l-3 3a1 1 0 01-1.414 0l-3-3a1 1 0 010-1.414z" clipRule="evenodd" />
+            </svg>
+             </a>
+
+            {/* <button className="border border-neon text-neon px-4 py-2 rounded-full font-medium flex items-center">
               DOWNLOAD CV
               <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4 ml-2" viewBox="0 0 20 20" fill="currentColor">
                 <path fillRule="evenodd" d="M3 17a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zm3.293-7.707a1 1 0 011.414 0L9 10.586V3a1 1 0 112 0v7.586l1.293-1.293a1 1 0 111.414 1.414l-3 3a1 1 0 01-1.414 0l-3-3a1 1 0 010-1.414z" clipRule="evenodd" />
               </svg>
-            </button>
+            </button> */}
             
             <div className="flex space-x-2">
-              <a href="#" className="w-8 h-8 rounded-full border border-gray-600 flex items-center justify-center hover:border-neon hover:text-neon">
-                <FaGithub />
-              </a>
-              <a href="#" className="w-8 h-8 rounded-full border border-gray-600 flex items-center justify-center hover:border-neon hover:text-neon">
+             <a
+  href="https://github.com/tik1311" // ✅ ใส่ลิงก์ GitHub ของคุณตรงนี้
+  target="_blank"                         // ✅ เปิดในแท็บใหม่
+  rel="noopener noreferrer"              // ✅ ปลอดภัย (แนะนำเสมอเมื่อใช้ target="_blank")
+  className="w-8 h-8 rounded-full border border-gray-600 flex items-center justify-center hover:border-neon hover:text-neon"
+>
+  <FaGithub />
+</a>
+              {/* <a href="#" className="w-8 h-8 rounded-full border border-gray-600 flex items-center justify-center hover:border-neon hover:text-neon">
                 <FaLinkedin />
               </a>
                <a href="#" className="w-8 h-8 rounded-full border border-gray-600 flex items-center justify-center hover:border-neon hover:text-neon">
                 <RiAliensLine />
-              </a>
+              </a> */}
             </div>
           </div>
         </div>
@@ -124,7 +135,6 @@ export default function Home() {
     </div>
   ))}
 </div>
-
 
 
 
