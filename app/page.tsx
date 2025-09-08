@@ -7,8 +7,8 @@ import { RiAliensLine } from "react-icons/ri";
 
 // กำหนดข้อมูลประสบการณ์ก่อนใช้งาน
 const experiences = [
-  { duration: "4 Month", role: "Software Developer [Full Stack Developer]" },
-  { duration: "2 Year", role: "IT and Application" },
+  { duration: "4 Month", role: "Software Developer" },
+  { duration: "2 Year", role: "IT Solutions Developer" },
   // เพิ่มข้อมูลตามจำนวนที่ต้องการ
 ];
 
@@ -46,7 +46,7 @@ export default function Home() {
             <div className="absolute inset-0 rounded-full border-2 border-neon animate-pulse"></div>
             <div className="absolute inset-0 rounded-full border-dashed border-2 border-neon animate-spin-slow"></div>
             <img
-            src="/zoey1.jpg"
+            src="/ku-tik.jpg"
             alt="Thitima Khamgong"
             className="absolute inset-0 w-full h-full rounded-full object-cover"
             />
@@ -55,7 +55,7 @@ export default function Home() {
 
         {/* Left Content (text) - now on the right */}
         <div className="space-y-6">
-          <p className="text-gray-300">Software Developer</p>
+          <p className="text-gray-300">Developer</p>
           <h2 className="text-5xl md:text-6xl font-mono leading-tight">
             I'm 
             <br />
